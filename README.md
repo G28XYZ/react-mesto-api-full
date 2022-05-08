@@ -9,6 +9,9 @@
 ## О сайте
 
 Сервис <a href="https://mesto.online.nomoredomains.work/" target="_blank">Mesto</a> интерактивная страница, куда можно зарегистрироваться и добавлять фотографии, удалять их и ставить лайки.
+Публичный IP - 51.250.98.91
+Ссылка на сайт - https://mesto.online.nomoredomains.work
+Ссылка API - https://api.mesto.online.nomoredomains.xyz
 
 ## О проекте и технологиях разработки
 
@@ -32,6 +35,7 @@
     <li>Объектно-ориентированное программирование (ООП)</li>
     <li>React <img style="width: 3%" src="https://github.com/github/explore/blob/main/topics/react/react.png" alt="React"></li>
     <li>Webpack <img style="width: 3%" src="https://github.com/github/explore/blob/main/topics/webpack/webpack.png" alt="Webpack"></li>
+      <li>ESlint <img style="width: 3%" src="https://github.com/github/explore/blob/main/topics/eslint/eslint.png" alt="ESlint"></li>
     <li>API</li>
     <li>Регистрация и авторизация</li>
 </ul>
