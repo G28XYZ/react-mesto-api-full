@@ -21,7 +21,7 @@
   <li>Grid</li>
   <li>Адаптивная вёрстка</li>
   <li>БЭМ</li>
-  <li>JavaScript <img src="https://github.com/github/explore/blob/main/topics/javascript/javascript.png" alt="JavaScript">
+  <li>JavaScript <img style="width: 3%" src="https://github.com/github/explore/blob/main/topics/javascript/javascript.png" alt="JavaScript">
     <ul>
       <li>Редактирование элементов</li>
       <li>Добавление/удаление элементов</li>
@@ -30,8 +30,8 @@
     </ul>
   </li>
     <li>Объектно-ориентированное программирование (ООП)</li>
-    <li>React <img src="https://github.com/github/explore/blob/main/topics/react/react.png" alt="React"></li>
-    <li>Webpack <img src="https://github.com/github/explore/blob/main/topics/webpack/webpack.png" alt="Webpack"></li>
+    <li>React <img style="width: 3%" src="https://github.com/github/explore/blob/main/topics/react/react.png" alt="React"></li>
+    <li>Webpack <img style="width: 3%" src="https://github.com/github/explore/blob/main/topics/webpack/webpack.png" alt="Webpack"></li>
     <li>API</li>
     <li>Регистрация и авторизация</li>
 </ul>
@@ -40,16 +40,16 @@
 
 <ul>
   <li>
-  NodeJS <img src="https://github.com/github/explore/blob/main/topics/nodejs/nodejs.png" alt="NodeJS">
+  NodeJS <img style="width: 3%" src="https://github.com/github/explore/blob/main/topics/nodejs/nodejs.png" alt="NodeJS">
   </li>
   <li>
-  Express <img src="https://github.com/github/explore/blob/main/topics/express/express.png" alt="Express">
+  Express <img style="width: 3%" src="https://github.com/github/explore/blob/main/topics/express/express.png" alt="Express">
   </li>
   <li>
-  MongoDB <img src="https://github.com/github/explore/blob/main/topics/mongodb/mongodb.png" alt="MongoDB">
+  MongoDB <img style="width: 3%" src="https://github.com/github/explore/blob/main/topics/mongodb/mongodb.png" alt="MongoDB">
   </li>
   <li>
-  Nginx <img src="https://github.com/github/explore/blob/main/topics/nginx/nginx.png" alt="Nginx">
+  Nginx <img style="width: 3%" src="https://github.com/github/explore/blob/main/topics/nginx/nginx.png" alt="Nginx">
   </li>
 </ul>
 
