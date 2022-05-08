@@ -27,7 +27,7 @@ module.exports.getMe = (req, res, next) => {
       if (!user) {
         next(new NotFoundError('Пользователь не найден'));
       }
-      return res.send(user);
+      return res.send(...user);
     })
     .catch(next);
 };
@@ -76,7 +76,7 @@ module.exports.updateProfile = (req, res, next) => {
 
   User.findByIdAndUpdate(req.user._id, { name, about }, { runValidators: true })
     .then((user) => res.send({
-      _id: [user._id],
+      _id: user._id,
       avatar: user.avatar,
       name,
       about,
@@ -107,7 +107,6 @@ module.exports.login = (req, res, next) => {
       res.cookie('jwt', token, {
         maxAge: 3600000,
         httpOnly: true,
-        sameSite: true,
       });
       res.send({ token });
     })
