@@ -1,7 +1,7 @@
-const Card = require("../models/card");
-const NotFoundError = require("../errors/NotFoundError");
-const ForbiddenError = require("../errors/ForbiddenError");
-const ValidationError = require("../errors/ValidationError");
+const Card = require('../models/card');
+const NotFoundError = require('../errors/NotFoundError');
+const ForbiddenError = require('../errors/ForbiddenError');
+const ValidationError = require('../errors/ValidationError');
 
 module.exports.getCards = (req, res, next) => {
   Card.find({})
@@ -15,8 +15,8 @@ module.exports.createCard = (req, res, next) => {
   Card.create({ name, link, owner })
     .then((card) => res.send(card))
     .catch((err) => {
-      if (err.name === "ValidationError") {
-        next(new ValidationError("Некорректные данные при создании карточки"));
+      if (err.name === 'ValidationError') {
+        next(new ValidationError('Некорректные данные при создании карточки'));
       } else {
         next(err);
       }
@@ -32,11 +32,11 @@ module.exports.deleteCard = (req, res, next) => {
 
   Card.findById(req.params.cardId)
     .then((card) => {
-      if (!card) next(new NotFoundError("Карточки не существует"));
+      if (!card) next(new NotFoundError('Карточки не существует'));
       if (req.user._id === card.owner.toString()) {
         return removeCard();
       }
-      return next(new ForbiddenError("Попытка удалить чужую карточку"));
+      return next(new ForbiddenError('Попытка удалить чужую карточку'));
     })
     .catch(next);
 };
@@ -51,7 +51,7 @@ module.exports.likeCard = (req, res, next) => {
       if (!card) {
         return next(
           new NotFoundError(
-            "Запрашиваемая карточка для добавления лайка не найдена",
+            'Запрашиваемая карточка для добавления лайка не найдена',
           ),
         );
       }
@@ -70,7 +70,7 @@ module.exports.dislikeCard = (req, res, next) => {
       if (!card) {
         return next(
           new NotFoundError(
-            "Запрашиваемая карточка для удаления лайка не найдена",
+            'Запрашиваемая карточка для удаления лайка не найдена',
           ),
         );
       }

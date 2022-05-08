@@ -1,19 +1,19 @@
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcryptjs");
-const NotFoundError = require("../errors/NotFoundError");
-const ConflictError = require("../errors/ConflictError");
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
+const NotFoundError = require('../errors/NotFoundError');
+const ConflictError = require('../errors/ConflictError');
 
-require("dotenv").config();
+require('dotenv').config();
 
-const { JWT_SECRET = "JWT_SECRET" } = process.env;
+const { JWT_SECRET = 'JWT_SECRET' } = process.env;
 
-const User = require("../models/user");
+const User = require('../models/user');
 
 module.exports.getUser = (req, res, next) => {
   User.findById(req.params.userId)
     .then((user) => {
       if (!user) {
-        next(new NotFoundError("Пользователь не найден"));
+        next(new NotFoundError('Пользователь не найден'));
       }
       return res.send(user);
     })
@@ -25,7 +25,7 @@ module.exports.getMe = (req, res, next) => {
   User.find({ _id })
     .then((user) => {
       if (!user) {
-        next(new NotFoundError("Пользователь не найден"));
+        next(new NotFoundError('Пользователь не найден'));
       }
       return res.send(...user);
     })
@@ -66,8 +66,8 @@ module.exports.createUser = (req, res, next) => {
     })
     .catch((err) => {
       if (err.code === 11000) {
-        next(new ConflictError("Пользователь уже существует"));
-      }
+        next(new ConflictError('Пользователь уже существует'));
+      } else next(err);
     });
 };
 
@@ -102,9 +102,9 @@ module.exports.login = (req, res, next) => {
   User.findUserByCredentials(email, password)
     .then((user) => {
       const token = jwt.sign({ _id: user._id }, JWT_SECRET, {
-        expiresIn: "7d",
+        expiresIn: '7d',
       });
-      res.cookie("jwt", token, {
+      res.cookie('jwt', token, {
         maxAge: 3600000,
         httpOnly: true,
       });
