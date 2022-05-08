@@ -9,8 +9,11 @@
 ## О сайте
 
 Сервис <a href="https://mesto.online.nomoredomains.work/" target="_blank">Mesto</a> интерактивная страница, куда можно зарегистрироваться и добавлять фотографии, удалять их и ставить лайки.
+
 Публичный IP - 51.250.98.91
+
 Ссылка на сайт - https://mesto.online.nomoredomains.work
+
 Ссылка API - https://api.mesto.online.nomoredomains.xyz
 
 ## О проекте и технологиях разработки
